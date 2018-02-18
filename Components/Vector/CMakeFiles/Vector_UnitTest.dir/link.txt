@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++14   CMakeFiles/Vector_UnitTest.dir/test/Vector_UnitTest.cpp.o CMakeFiles/Vector_UnitTest.dir/Vector.cpp.o  -o Vector_UnitTest -rdynamic -lGTEST_LIBS_DIR 
