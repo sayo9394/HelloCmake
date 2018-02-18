@@ -13,10 +13,12 @@ if (UNITTEST)
     )
 
     add_executable(${TEST_NAME} ${TEST_FILES} ${SRC_FILES})
-    
-    target_link_libraries(${TEST_NAME} GTEST_LIBS_DIR)
 
     add_dependencies(${TEST_NAME} googletest)
+	target_link_libraries(	${TEST_NAME} ${GTEST_LIBS_DIR}/libgtest.a
+							${GTEST_LIBS_DIR}/libgtest_main.a
+							pthread
+	)
 
     target_include_directories(${TEST_NAME}
         PRIVATE

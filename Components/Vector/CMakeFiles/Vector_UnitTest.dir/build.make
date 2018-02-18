@@ -116,6 +116,8 @@ Vector_UnitTest_EXTERNAL_OBJECTS =
 Components/Vector/Vector_UnitTest: Components/Vector/CMakeFiles/Vector_UnitTest.dir/test/Vector_UnitTest.cpp.o
 Components/Vector/Vector_UnitTest: Components/Vector/CMakeFiles/Vector_UnitTest.dir/Vector.cpp.o
 Components/Vector/Vector_UnitTest: Components/Vector/CMakeFiles/Vector_UnitTest.dir/build.make
+Components/Vector/Vector_UnitTest: gtest/src/googletest-build/googlemock/gtest/libgtest.a
+Components/Vector/Vector_UnitTest: gtest/src/googletest-build/googlemock/gtest/libgtest_main.a
 Components/Vector/Vector_UnitTest: Components/Vector/CMakeFiles/Vector_UnitTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/simon/helloWorld/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Vector_UnitTest"
 	cd /home/simon/helloWorld/Components/Vector && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Vector_UnitTest.dir/link.txt --verbose=$(VERBOSE)
