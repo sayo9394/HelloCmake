@@ -14,7 +14,7 @@ if (UNITTEST)
 
     add_executable(${TEST_NAME} ${TEST_FILES} ${SRC_FILES})
     
-    target_link_libraries(${TEST_NAME} GTEST_LIBS_DIR)
+    #target_link_libraries(${TEST_NAME} ${GTEST_LIBS_DIR})
 
     add_dependencies(${TEST_NAME} googletest)
 
