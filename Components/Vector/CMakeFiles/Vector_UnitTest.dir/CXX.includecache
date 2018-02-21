@@ -11,6 +11,8 @@ Vector.hpp
 /home/simon/helloWorld/Components/Vector/Vector.hpp
 
 /home/simon/helloWorld/Components/Vector/Vector.hpp
+memory
+-
 
 /home/simon/helloWorld/Components/Vector/test/Vector_UnitTest.cpp
 Vector.hpp
@@ -19,6 +21,8 @@ gtest/gtest.h
 /home/simon/helloWorld/Components/Vector/test/gtest/gtest.h
 
 Components/Vector/Vector.hpp
+memory
+-
 
 gtest/src/googletest/googletest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h

@@ -147,6 +147,19 @@ Vector_UnitTest/fast:
 	$(MAKE) -f Components/Vector/CMakeFiles/Vector_UnitTest.dir/build.make Components/Vector/CMakeFiles/Vector_UnitTest.dir/build
 .PHONY : Vector_UnitTest/fast
 
+#=============================================================================
+# Target rules for targets named LinkedList_UnitTest
+
+# Build rule for target.
+LinkedList_UnitTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LinkedList_UnitTest
+.PHONY : LinkedList_UnitTest
+
+# fast build rule for target.
+LinkedList_UnitTest/fast:
+	$(MAKE) -f Components/LinkedList/CMakeFiles/LinkedList_UnitTest.dir/build.make Components/LinkedList/CMakeFiles/LinkedList_UnitTest.dir/build
+.PHONY : LinkedList_UnitTest/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -158,6 +171,7 @@ help:
 	@echo "... test"
 	@echo "... googletest"
 	@echo "... Vector_UnitTest"
+	@echo "... LinkedList_UnitTest"
 .PHONY : help
 
 
