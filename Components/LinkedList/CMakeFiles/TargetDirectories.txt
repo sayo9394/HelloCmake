@@ -1,3 +1,0 @@
-/home/simon/helloWorld/Components/LinkedList/CMakeFiles/rebuild_cache.dir
-/home/simon/helloWorld/Components/LinkedList/CMakeFiles/edit_cache.dir
-/home/simon/helloWorld/Components/LinkedList/CMakeFiles/LinkedList_UnitTest.dir
