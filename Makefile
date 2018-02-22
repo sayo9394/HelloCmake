@@ -20,7 +20,7 @@ build-unittest: config-unittest
 	cd build/unittest && $(MAKE)
 
 run-unittest: build-unittest
-	$(call make test ,build/unittest)
+	$(call RUN_UNITTEST,build/unittest)
 
 clean-unittest:
 	rm -rf build/unittest
