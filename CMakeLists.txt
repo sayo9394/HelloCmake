@@ -37,3 +37,4 @@ include_directories(${GTEST_INCLUDE_DIRS})
 
 add_subdirectory(Components/Vector)
 add_subdirectory(Components/LinkedList)
+add_subdirectory(Components/BinarySearchTree)
