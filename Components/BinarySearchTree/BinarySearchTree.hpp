@@ -2,6 +2,7 @@
 #define BINARY_SEARCH_TREE_HPP_
 
 #include <memory>
+#include <functional>
 
 struct Node
 {
@@ -20,7 +21,8 @@ public:
 	~BinarySearchTree(){}
 
 	void Insert(double item);
-	void TraverseTree();
+	void TraverseTree(std::function<void(double _item)>& funk);
+	
 	std::unique_ptr<Node> SearchTree(double item);
 	double FindMinimum();
 

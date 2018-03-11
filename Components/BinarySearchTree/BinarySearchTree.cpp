@@ -1,6 +1,7 @@
 #include "BinarySearchTree.hpp"
 #include <cassert>
 #include <stdexcept>
+#include <functional>
 
 using namespace std;
 
@@ -25,6 +26,16 @@ std::unique_ptr<Node> SearchTreeHelper(std::unique_ptr<Node>& node,
   return tmp;
 }
 
+void TraverseTree(std::unique_ptr<Node>& node, function<void(double _item)>& funk)
+{
+	if(node)
+	{
+		TraverseTree(node->left, funk);
+		funk(node->item);
+		TraverseTree(node->right, funk);
+	}
+}
+
 } // namespace
 
 BinarySearchTree::BinarySearchTree() : m_root{nullptr} {}
@@ -33,7 +44,9 @@ void BinarySearchTree::Insert(double item) {
 	InsertHelper(m_root, item); 
 }
 
-void BinarySearchTree::TraverseTree() {}
+void BinarySearchTree::TraverseTree(function<void(double _item)>& funk) {
+	TraverseTree(m_root, funk);
+}
 
 std::unique_ptr<Node> BinarySearchTree::SearchTree(double item) {
   return SearchTreeHelper(m_root, item);
