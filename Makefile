@@ -2,7 +2,7 @@
 PROJECT_NAME	= HelloCMake
 
 CURRENT_PWD_DIR = ${shell pwd}
-CURRENT_DIR		= ${shell cygpath -m $(CURRENT_PWD_DIR)}
+CURRENT_DIR	= ${shell cygpath -m $(CURRENT_PWD_DIR)}
 
 # Macro to run one or all ctest unittests
 define RUN_UNITTEST
