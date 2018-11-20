@@ -9,7 +9,6 @@ define RUN_UNITTEST
 	$(if $(ARG), cd $(1) && ctest -R _UnitTest -V -R $(ARG), cd $(1) && ctest -R _UnitTest --timeout 240)
 endef
 
-# MB device release config/build/clean targets
 config-unittest: build/unittest/Makefile
 build/unittest/Makefile:
 	mkdir -p build/unittest
