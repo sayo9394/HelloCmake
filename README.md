@@ -1,6 +1,10 @@
 # HelloCmake
 
-My first CMake Project. Skeleton code and some completed code of Containers and Algorithms implemented in C++11;
-- Binary Search Tree
-- LinkedList
-- Vector
+A C++ project to use the following;
+- CMake
+- Gtest/GMock
+
+to develop the following as an exercise;
+- Containers (LinkedList, Vector, Map, etc...)
+
+
