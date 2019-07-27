@@ -1,0 +1,6 @@
+{
+    "clang-format.assumeFilename": "-style=file",
+    "files.associations": {
+        "functional": "cpp"
+    }
+}
