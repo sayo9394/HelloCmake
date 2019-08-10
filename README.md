@@ -1,10 +1,14 @@
-# HelloCmake
+# BaseService Skeleton
 
-A C++ project to use the following;
-- CMake
-- Gtest/GMock
+### unittest tool for Developer
+For developers implementing the micro-services on the Ubuntu platform, we have introduced a unittest abiblity that will
+get you started in minutes with unittest strategy.
 
-to develop the following as an exercise;
-- Containers (LinkedList, Vector, Map, etc...)
+# build unittest
+$ make build-unittest
 
+# clean
+$ make clean
 
+# build service
+$ make build-service

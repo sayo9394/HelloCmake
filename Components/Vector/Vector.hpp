@@ -2,15 +2,27 @@
 #define VECTOR_HPP_
 
 #include <memory>
+#include <cstring>
 
+namespace
+{
+const int START_SIZE = 2;
+const double K_CONSTANT = 1.5;
+
+template <class T>
 class Vector
 {
 public:
-	Vector();
-	~Vector(){}
+    Vector();
+    explicit Vector();
+    ~Vector()
+    {
+	}
 
 private:
-	std::unique_ptr<double> m_data;
-	int m_size;
+    T* m_data;
+    size_t m_size;
 };
-#endif //VECTOR_HPP_
+
+} // namespace
+#endif // VECTOR_HPP_

@@ -1,40 +1,41 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.13)
 
-project(HelloCmake C CXX)
+include(cmake/BuildType.cmake)
+include(cmake/ToolchainConfig.cmake)
+
+if (NOT PROJECT_NAME)
+    message(WARNING "Undefined PROJECT_NAME variable (e.g. cmake -DPROJECT_NAME:STRING=service_skeleton).")
+    set(PROJECT_NAME service)
+endif()
+
+if (UNITTEST)
+    # Enabling ctest
+    enable_testing()
+
+    set(PROJECT_NAME "${PROJECT_NAME}_UnitTest")
+endif()
+
+# service attributes
+set(SERVICE_NAME XYZ)
+set(SERVICE_DOMAIN com.${COMPANY_ALIAS})
+###
+### Project settings
+###
+set(SERVICE_VERSION_MAJOR "0")
+set(SERVICE_VERSION_MINOR "0")
+set(SERVICE_VERSION_PATCH "1")
+set(SERVICE_VERSION "${SERVICE_VERSION_MAJOR}.${SERVICE_VERSION_MINOR}.${SERVICE_VERSION_PATCH}")
+
+project(${PROJECT_NAME} VERSION "${SERVICE_VERSION}")
+
+configure_file(version.h.in ${PROJECT_BINARY_DIR}/src/version.h)
+message(STATUS "${PROJECT_NAME} version ${SERVICE_VERSION}")
 
 include(CheckCXXCompilerFlag)
 
-CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
-if(COMPILER_SUPPORTS_CXX11)
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-else()
-        message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
-endif()
-
-
-# Set a default build type for single-configuration
-# CMake generators if no build type is set.
-IF(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
-   SET(CMAKE_BUILD_TYPE RelWithDebInfo)
-ENDIF(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
-
-# Select flags.
-SET(CMAKE_CXX_FLAGS 			"${CMAKE_CXX_FLAGS} -Wall -fno-rtti")
-SET(CMAKE_CXX_FLAGS_RELWITHDEBINFO 	"${CMAKE_CXX_FLAGS_RELWITHDEBINFO} -O2 -g")
-SET(CMAKE_CXX_FLAGS_RELEASE 		"${CMAKE_CXX_FLAGS_RELEASE} -O2")
-SET(CMAKE_CXX_FLAGS_DEBUG  		"${CMAKE_CXX_FLAGS_DEBUG} -O0 -g")
-
-
 # Turn verbosity on/off
-set(CMAKE_VERBOSE_MAKEFILE OFF)
+set(CMAKE_VERBOSE_MAKEFILE ON)
 
-include(cmake/gtest.cmake)
-
-# Enabling ctest
-enable_testing()
-
-include_directories(${GTEST_INCLUDE_DIRS})
-
+# Add source subdirectory
+add_subdirectory(src)
 add_subdirectory(Components/Vector)
-add_subdirectory(Components/LinkedList)
-add_subdirectory(Components/BinarySearchTree)

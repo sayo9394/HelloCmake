@@ -2,5 +2,6 @@
     "clang-format.assumeFilename": "-style=file",
     "files.associations": {
         "functional": "cpp"
-    }
+    },
+    "editor.fontFamily": "DejaVu Sans Mono for Powerline, Consolas, 'Courier New', monospace"
 }
