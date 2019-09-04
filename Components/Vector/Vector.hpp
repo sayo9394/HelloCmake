@@ -4,8 +4,6 @@
 #include <memory>
 #include <cstring>
 
-namespace
-{
 const int START_SIZE = 2;
 const double K_CONSTANT = 1.5;
 
@@ -14,15 +12,14 @@ class Vector
 {
 public:
     Vector();
-    explicit Vector();
-    ~Vector()
-    {
-	}
+    explicit Vector(size_t size);
+    Vector(const Vector<T>& data);
+    ~Vector(){}
+
+    size_t size() {return m_size;}
 
 private:
     T* m_data;
     size_t m_size;
 };
-
-} // namespace
 #endif // VECTOR_HPP_
