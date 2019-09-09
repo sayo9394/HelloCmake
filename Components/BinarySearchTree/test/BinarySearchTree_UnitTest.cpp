@@ -1,5 +1,6 @@
 #include "BinarySearchTree.hpp"
 #include "gtest/gtest.h"
+
 #include <stdexcept>
 #include <vector>
 #include <functional>
@@ -39,9 +40,12 @@ TEST(BinarySearchTree_UnitTest, testTraverseTree) {
   m_testObj.Insert(6);
   m_testObj.Insert(9);
 
-  auto funk = [&v](double _item) { 
-                  v.push_back(_item); 
-                };
+  m_testObj.TraverseTree([&](double _item){v.push_back(_item);});
 
-  m_testObj.TraverseTree(funk);
+  ASSERT_EQ(v.size(), 6);
+  
+  ASSERT_EQ(v[0], 5);
+  ASSERT_EQ(v[1], 6);
+  ASSERT_EQ(v[2], 7);
+  ASSERT_EQ(v[3], 8);
 }

@@ -38,4 +38,5 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 
 # Add source subdirectory
 add_subdirectory(src)
-add_subdirectory(Components/Vector)
+# add_subdirectory(Components/Vector)
+add_subdirectory(Components/BinarySearchTree)

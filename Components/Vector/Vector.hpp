@@ -18,6 +18,9 @@ public:
 
     size_t size() {return m_size;}
 
+    Vector<T>& operator[]
+
+
 private:
     T* m_data;
     size_t m_size;
