@@ -10,15 +10,14 @@ if (UNITTEST)
 
     set(TEST_FILES
         test/BinarySearchTree_UnitTest.cpp
+        ../../src/test/gtest_main.cpp
     )
 
     add_executable(${TEST_NAME} ${TEST_FILES} ${SRC_FILES})
-    add_dependencies(${TEST_NAME} googletest)
-    target_link_libraries(${TEST_NAME} 
-    			  ${GTEST_LIBS_DIR}/libgtest.a
-			  ${GTEST_LIBS_DIR}/libgtest_main.a
-			  pthread
-    )
+	target_link_libraries(	${TEST_NAME} gmock gtest
+							pthread
+	)
+
     target_include_directories(${TEST_NAME}
         PRIVATE
             ${CMAKE_CURRENT_SOURCE_DIR}

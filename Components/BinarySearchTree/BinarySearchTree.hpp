@@ -21,7 +21,7 @@ public:
 	~BinarySearchTree(){}
 
 	void Insert(double item);
-	void TraverseTree(std::function<void(double _item)>& funk);
+	void TraverseTree(std::function<void(double _item)>const& funk);
 	
 	std::unique_ptr<Node> SearchTree(double item);
 	double FindMinimum();

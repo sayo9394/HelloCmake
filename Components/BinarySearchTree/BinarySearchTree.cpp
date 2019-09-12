@@ -3,12 +3,10 @@
 #include <stdexcept>
 #include <functional>
 
-using namespace std;
-
 namespace { // Binary Search Tree Helper Functions
 
 void InsertHelper(std::unique_ptr<Node>& node, double item) {
-	auto tmp = unique_ptr<Node>(new Node(item));
+	auto tmp = std::unique_ptr<Node>(new Node(item));
   if (!node) {
     node = std::move(tmp);
   } else {
@@ -26,13 +24,13 @@ std::unique_ptr<Node> SearchTreeHelper(std::unique_ptr<Node>& node,
   return tmp;
 }
 
-void TraverseTree(std::unique_ptr<Node>& node, function<void(double _item)>& funk)
+void TraverseTreeHelper(std::unique_ptr<Node>& node, std::function<void(double _item)>const& funk)
 {
 	if(node)
 	{
-		TraverseTree(node->left, funk);
+		TraverseTreeHelper(node->left, funk);
 		funk(node->item);
-		TraverseTree(node->right, funk);
+		TraverseTreeHelper(node->right, funk);
 	}
 }
 
@@ -44,8 +42,8 @@ void BinarySearchTree::Insert(double item) {
 	InsertHelper(m_root, item); 
 }
 
-void BinarySearchTree::TraverseTree(function<void(double _item)>& funk) {
-	TraverseTree(m_root, funk);
+void BinarySearchTree::TraverseTree(const std::function<void(double _item)>& funk) {
+    TraverseTreeHelper(m_root, funk);
 }
 
 std::unique_ptr<Node> BinarySearchTree::SearchTree(double item) {
