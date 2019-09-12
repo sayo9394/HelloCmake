@@ -1,7 +1,3 @@
-#
-# Copyright (C) 2019 Duncan Technologies Pty Ltd. All rights reserved.
-#
-
 # Set a default build type if none was specified
 set(DEFAULT_BUILD_TYPE "Release")
 if ("${TARGET_TYPE}" STREQUAL UBUNTU)

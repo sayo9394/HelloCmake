@@ -1,7 +1,3 @@
-#
-# Copyright (C) 2019 Duncan Technologies Pty Ltd. All rights reserved.
-#
-
 if ("${TARGET_TYPE}" STREQUAL YOCTO)
     set(CMAKE_CXX_STANDARD 14)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
