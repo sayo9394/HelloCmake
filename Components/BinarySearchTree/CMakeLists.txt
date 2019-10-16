@@ -1,10 +1,6 @@
 # define the project name of this address space
 project(BinarySearchTree C CXX)
 
-set(SRC_FILES
-    ${CMAKE_CURRENT_SOURCE_DIR}/BinarySearchTree.cpp
-)
-
 if (UNITTEST)
     set(TEST_NAME ${PROJECT_NAME}_UnitTest)
 

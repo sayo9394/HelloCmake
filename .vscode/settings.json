@@ -3,5 +3,7 @@
     "files.associations": {
         "functional": "cpp"
     },
-    "editor.fontFamily": "DejaVu Sans Mono for Powerline, Consolas, 'Courier New', monospace"
+    "editor.fontFamily": "DejaVu Sans Mono for Powerline, Consolas, 'Courier New', monospace",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c11"
 }

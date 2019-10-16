@@ -6,7 +6,7 @@
 #include <functional>
 
 TEST(BinarySearchTree_UnitTest, testInsertAndFindMinimum) {
-  BinarySearchTree m_testObj;
+  BinarySearchTree<int> m_testObj;
 
   // test out_of_range exception is thrown
   ASSERT_THROW(m_testObj.FindMinimum(), std::out_of_range);
@@ -31,8 +31,7 @@ TEST(BinarySearchTree_UnitTest, testInsertAndFindMinimum) {
 }
 
 TEST(BinarySearchTree_UnitTest, testTraverseTree) {
-  BinarySearchTree m_testObj;
-  std::vector<double> v;
+  BinarySearchTree<double> m_testObj;
   m_testObj.Insert(10);
   m_testObj.Insert(8);
   m_testObj.Insert(7);
@@ -40,6 +39,7 @@ TEST(BinarySearchTree_UnitTest, testTraverseTree) {
   m_testObj.Insert(6);
   m_testObj.Insert(9);
 
+  std::vector<double> v;
   m_testObj.TraverseTree([&](double _item){v.push_back(_item);});
 
   ASSERT_EQ(v.size(), 6);

@@ -2,8 +2,8 @@ AccessModifierOffset: -4
 AlignTrailingComments: true
 AllowAllParametersOfDeclarationOnNextLine: false
 AllowShortFunctionsOnASingleLine: true
-AllowShortIfStatementsOnASingleLine: false
-AllowShortLoopsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
 AlwaysBreakTemplateDeclarations: true
 BreakBeforeBinaryOperators: false
 BreakBeforeBraces: Allman
@@ -14,15 +14,12 @@ Language: Cpp
 NamespaceIndentation: All
 SpaceBeforeParens: ControlStatements
 SpaceInEmptyParentheses: false
-AllowShortFunctionsOnASingleLine: false
-AllowShortIfStatementsOnASingleLine: false
-AllowShortLoopsOnASingleLine: false
 #activeProgramOK.Subscribe( *this );
 #true means above
 #I like no space
 SpacesInParentheses: false
 SpaceBeforeAssignmentOperators: true
-Standard: Cpp03
+Standard: Cpp11
 UseTab: Never
 PointerAlignment: Left
 SortIncludes: false

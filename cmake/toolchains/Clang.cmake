@@ -1,4 +1,4 @@
-set(CMAKE_C_FLAGS                   "-Wall -std=c99 -fprofile-arcs -ftest-coverage")
+set(CMAKE_C_FLAGS                   "-Wall -std=c11 -fprofile-arcs -ftest-coverage")
 set(CMAKE_C_FLAGS_DEBUG             "-g")
 set(CMAKE_C_FLAGS_MINSIZEREL        "-Os -DNDEBUG")
 set(CMAKE_C_FLAGS_RELEASE           "-O4 -DNDEBUG")
