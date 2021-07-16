@@ -1,8 +1,5 @@
-# BaseService Skeleton
-
-### unittest tool for Developer
-For developers implementing the micro-services on the Ubuntu platform, we have introduced a unittest abiblity that will
-get you started in minutes with unittest strategy.
+# Description
+A very simple project that was used as an intro to cmake, and to using gtest with cmake.
 
 # build unittest
 $ make build-unittest
